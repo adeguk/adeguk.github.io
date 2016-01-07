@@ -2,7 +2,7 @@
 /****************************************************
 *				Media Query 						*
 ****************************************************/
-@media only screen and (max-width: 459px) {
+@media only screen and (min-width: 300px) {
   #slider h2{
     font-size: 1.6rem;
   }
@@ -12,6 +12,27 @@
 	  letter-spacing: 0.05rem;
   }
   #slider blockquote{line-height: normal;}
+  #holder {
+    height: 420px;
+    width: 375px;
+    margin: -40px -115px;
+  }
+}
+@media only screen and (min-width: 360px) {
+  #slider h2{
+    font-size: 1.6rem;
+  }
+  #slider span{
+	  font-size: 1.2rem;
+	  font-family: 'Lobster', cursive;
+	  letter-spacing: 0.05rem;
+  }
+  #slider blockquote{line-height: normal;}
+  #holder {
+    height: 420px;
+    width: 375px;
+    margin: -40px -95px;
+  }
 }
 
 @media only screen and (min-width: 480px) {
@@ -22,6 +43,11 @@
   #slider span{
 	  font-size: 1.65rem;
 	  font-family: 'Lobster', cursive;
+  }
+  #holder {
+    height: 420px;
+    width: 375px;
+    margin: -40px -85px;
   }
 }
 
@@ -34,6 +60,7 @@
 	  font-size: 1.875rem;
 	  font-family: 'Lobster', cursive;
   }
+  #holder {margin: -40px 5px; }
 }
 
 @media only screen and (min-width: 720px) {
@@ -45,8 +72,13 @@
 	  font-size: 2.1rem;
 	  font-family: 'Lobster', cursive;
   }
+  #holder {
+    margin: -55px -15px;
+  }
 }
-
+@media only screen and (min-width: 760px) {
+  #holder {margin: -50px -95px;}
+}
 @media only screen and (min-width: 840px) {
   #slider h2 {
     font-size: 3.2rem;
@@ -56,6 +88,12 @@
 	  font-size: 2.4rem
   }
   header{padding-bottom: 10px}
+  #holder {
+    margin: -50px -55px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #holder {margin: -50px -65px;}
 }
 
 @media only screen and (min-width: 960px) {
@@ -67,6 +105,7 @@
 	  font-size: 2.625rem;
 	  font-family: 'Lobster', cursive;
   }
+  #holder { margin: 0 0 30px;}
 }
 
 /* Content elements */
@@ -85,8 +124,8 @@
 .slider .decorow {
 	width: 260px;
 	height: 260px;
-	border: 2px dashed #999;
-	border: 2px dashed rgba(150,150,150,0.4);
+	border: 2px dashed #212121;
+	/*border: 2px dashed rgba(150,150,150,0.4);*/
 	border-radius: 50%;
 	position: relative;
 	margin:0 auto;
@@ -94,8 +133,7 @@
 .slider .right-align .deco {
 	width: 260px;
 	height: 260px;
-	border: 2px dashed #999;
-	border: 2px dashed rgba(150,150,150,0.4);
+	border: 2px dashed #000;
 	border-radius: 50%;
 	position: relative;
 	/*bottom: 50%;*/
@@ -105,7 +143,7 @@
 .slider [data-icon]:after {
     content: attr(data-icon);
     font-family: 'truelove';
-	color: #999;
+	color: #212121;
 	text-shadow: 0 0 1px #999;
 	position: absolute;
 	width: 220px;
@@ -175,6 +213,105 @@
 	-ms-animation: fadeOut 1s linear both;
 	animation: fadeOut 1s linear both;
 }
+/************** Skills Bar ********************/
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+    width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+.ba, .its, .webdev, .as, .ets{height: 25px; width: 25px;}
+.its {background-color:#97BE0D; }
+.ba {background-color:#88B8E6; }
+.ets{background-color:#D84F00; }
+.webdev {background-color:#EDEB00; }
+.as {background-color:#9A2BCC; }
+
+.my-legend .legend-scale ul {
+    margin-bottom: 0;
+    float: left;
+    list-style: none;
+    width: 100%;
+}
+.my-legend .legend-scale ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    list-style: none;
+}
+.my-legend ul.legend-labels li span {
+    float: left;
+    height: 25px;
+    width: 100%;
+}
+
+/***************** keyframes ******************/
 @-webkit-keyframes roll{
 	0% {-webkit-transform: translateX(500px) rotate(360deg);}
 	100% {-webkit-transform: translateX(0px) rotate(0deg);}
