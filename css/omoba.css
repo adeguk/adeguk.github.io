@@ -1,4 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+* {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
 /****************************************************
 *				Media Query 						*
 ****************************************************/
@@ -16,6 +23,13 @@
     height: 420px;
     width: 375px;
     margin: -40px -115px;
+  }
+  i.circle{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 7%;
+    font-weight: bold;
   }
 }
 @media only screen and (min-width: 360px) {
@@ -310,7 +324,13 @@
     height: 25px;
     width: 100%;
 }
-
+@import url(https://fonts.googleapis.com/css?family=Cookie);
+.subtitle {
+    font-size: 22px;
+    font-family: 'Cookie', cursive;
+    margin-top: -10px;
+}
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 /***************** keyframes ******************/
 @-webkit-keyframes roll{
 	0% {-webkit-transform: translateX(500px) rotate(360deg);}
